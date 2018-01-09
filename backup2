@@ -1,0 +1,63 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.1.53-community
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema muleflightdatabase2
+--
+
+CREATE DATABASE IF NOT EXISTS muleflightdatabase2;
+USE muleflightdatabase2;
+
+--
+-- Definition of table `american`
+--
+
+DROP TABLE IF EXISTS `american`;
+CREATE TABLE `american` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `code` varchar(45) NOT NULL,
+  `price` int(10) unsigned NOT NULL,
+  `departureDate` varchar(45) NOT NULL,
+  `origin` varchar(45) NOT NULL,
+  `destination` varchar(45) NOT NULL,
+  `emptySeats` int(10) unsigned NOT NULL,
+  `planeType` varchar(45) NOT NULL,
+  `totalSeats` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `american`
+--
+
+/*!40000 ALTER TABLE `american` DISABLE KEYS */;
+INSERT INTO `american` (`id`,`code`,`price`,`departureDate`,`origin`,`destination`,`emptySeats`,`planeType`,`totalSeats`) VALUES 
+ (1,'ER38sd',400,'20/03/2018','MUA','SFO',0,'Boeing 737',150),
+ (2,'ER45if',345,'22/03/2018','MUA','LAX',10,'Boeing 777',300),
+ (3,'Erfj64k',500,'24/03/2018','SFO','LAX',8,'Boeing 878',200),
+ (4,'ERjfh3',340,'26/03/2018','SFO','MUA',70,'Boeing 737',180);
+/*!40000 ALTER TABLE `american` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
